@@ -24,6 +24,12 @@ function fetch_content( $url ) {
 	curl_setopt( $ch, CURLOPT_URL, $url );
 	curl_setopt( $ch, CURLOPT_HEADER, 0 );
 
+/*  Also set the line below to specify the certificate info for cURL to use to validate the host being connected to.
+ *  If you have publications referenced to https URLs it will fail.
+ *
+ *  curl_setopt( $ch, CURLOPT_CAINFO, '...your cert path per filesystem...X.509 PEM format here...');
+ */
+
 	ob_start();
 
 	curl_exec( $ch );
