@@ -161,7 +161,7 @@ class WP_Publication_Archive {
 		echo '<input class="button" id="upload_doc_button" type="button" value="Upload Publication" alt="Upload Publication" />';
 		echo "<script type=\"text/javascript\">
 jQuery(document).ready(function() {
-	jQuery('#upload_doc_button').on('click', function() {
+	jQuery('#upload_doc_button').click( function() {
 		window.send_to_editor = function(html) {
 			var docurl = jQuery(html).attr('href');
 			jQuery('#wpa_upload_doc').val(docurl);
@@ -190,7 +190,7 @@ jQuery(document).ready(function() {
 
 		echo "<script type=\"text/javascript\">
 	jQuery(document).ready(function() {
-		jQuery('#wpa-upload_image_button').on('click', function() {
+		jQuery('#wpa-upload_image_button').click( function() {
 			window.send_to_editor = function(html) {
 				var imgurl = jQuery('img',html).attr('src');
 				jQuery('#wpa-upload_image').val(imgurl);
